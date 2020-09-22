@@ -33,10 +33,10 @@ message Frame{
     SendLikeReq send_like_req = 207;
     SetGroupKickReq set_group_kick_req = 208;
     SetGroupBanReq set_group_ban_req = 209;
-    SetGroupAnonymousReq set_group_anonymous_ban_req = 210;
+    SetGroupAnonymousBanReq set_group_anonymous_ban_req = 210;
     SetGroupWholeBanReq set_group_whole_ban_req = 211;
     SetGroupAdminReq set_group_admin_req = 212;
-    SetGroupAnonymousBanReq set_group_anonymous_req = 213;
+    SetGroupAnonymousReq set_group_anonymous_req = 213;
     SetGroupCardReq set_group_card_req = 214;
     SetGroupNameReq set_group_name_req = 215;
     SetGroupLeaveReq set_group_leave_req = 216;
