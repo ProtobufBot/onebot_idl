@@ -5,7 +5,7 @@ import "onebot_event.proto";
 
 message Frame{
   int64 botId = 1;
-  MessageType message_type = 2;
+  FrameType frame_type = 2;
   string echo = 3;
   bool ok = 4; // 是否正常 （API resp）
   map<string, string> extra = 100;
@@ -103,7 +103,7 @@ message Frame{
     CleanCacheResp clean_cache_resp = 338;
   }
 
-  enum MessageType{
+  enum FrameType{
     UNKNOWN = 0;
 
     PrivateMessageEvent = 101;
