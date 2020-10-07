@@ -202,7 +202,7 @@ message GetStrangerInfoResp{
 message GetFriendListReq{
 }
 message GetFriendListResp{
-  repeated Friend friend_list = 1;
+  repeated Friend friend = 1;
 
 
   message Friend{
@@ -226,7 +226,7 @@ message GetGroupInfoResp{
 message GetGroupListReq{
 }
 message GetGroupListResp{
-  repeated Group group_list = 1;
+  repeated Group group = 1;
 
 
   message Group{
@@ -264,7 +264,7 @@ message GetGroupMemberListReq{
   int64 group_id = 1;
 }
 message GetGroupMemberListResp{
-  repeated GroupMember group_member_list = 1;
+  repeated GroupMember group_member = 1;
 
 
   message GroupMember{
@@ -293,11 +293,11 @@ message GetGroupHonorInfoReq{
 message GetGroupHonorInfoResp{
   int64 group_id = 1;
   CurrentTalkative current_talkative = 2;
-  repeated Honor talkative_list = 3;
-  repeated Honor performer_list = 4;
-  repeated Honor legend_list = 5;
-  repeated Honor strong_newbie_list = 6;
-  repeated Honor emotion_list = 7;
+  repeated Honor talkative = 3;
+  repeated Honor performer = 4;
+  repeated Honor legend = 5;
+  repeated Honor strong_newbie = 6;
+  repeated Honor emotion = 7;
 
 
   message CurrentTalkative{
