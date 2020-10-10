@@ -130,7 +130,7 @@ message GroupRecallNoticeEvent{
   int64 group_id = 5;
   int64 user_id = 6;
   int64 operator_id = 7;
-  int64 message_id = 8;
+  int32 message_id = 8;
 }
 
 message FriendRecallNoticeEvent{
@@ -139,7 +139,7 @@ message FriendRecallNoticeEvent{
   string post_type = 3;
   string notice_type = 4;
   int64 user_id = 5;
-  int64 message_id = 6;
+  int32 message_id = 6;
 }
 
 message FriendRequestEvent{
