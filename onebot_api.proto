@@ -47,7 +47,8 @@ message GetMsgResp{
   int32 message_id = 3;
   int32 real_id = 4;
   Sender sender = 5;
-  Message message = 6;
+  repeated Message message = 6;
+  string raw_message = 7;
 
 
   message Sender{
