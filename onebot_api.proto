@@ -198,6 +198,8 @@ message GetStrangerInfoResp{
     string nickname = 2;
     string sex = 3;
     int32 age = 4;
+    int32 level = 5; // 扩展
+    int64 login_days = 6; // 扩展
 }
 
 message GetFriendListReq{
