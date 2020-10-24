@@ -20,6 +20,7 @@ message PrivateMessageEvent{
         string sex = 3;
         int32 age = 4;
     }
+    map<string, string> extra = 255;
 }
 
 message GroupMessageEvent{
@@ -52,6 +53,7 @@ message GroupMessageEvent{
         string role = 8;
         string title = 9;
     }
+    map<string, string> extra = 255;
 }
 
 message GroupUploadNoticeEvent{
@@ -68,6 +70,7 @@ message GroupUploadNoticeEvent{
         int64 size = 3;
         int64 busid = 4;
     }
+    map<string, string> extra = 255;
 }
 
 message GroupAdminNoticeEvent{
@@ -78,6 +81,7 @@ message GroupAdminNoticeEvent{
     string sub_type = 5;
     int64 group_id = 6;
     int64 user_id = 7;
+    map<string, string> extra = 255;
 }
 
 message GroupDecreaseNoticeEvent{
@@ -89,6 +93,7 @@ message GroupDecreaseNoticeEvent{
     int64 group_id = 6;
     int64 operator_id = 7;
     int64 user_id = 8;
+    map<string, string> extra = 255;
 }
 
 message GroupIncreaseNoticeEvent{
@@ -100,6 +105,7 @@ message GroupIncreaseNoticeEvent{
     int64 group_id = 6;
     int64 operator_id = 7;
     int64 user_id = 8;
+    map<string, string> extra = 255;
 }
 
 message GroupBanNoticeEvent{
@@ -112,6 +118,7 @@ message GroupBanNoticeEvent{
     int64 operator_id = 7;
     int64 user_id = 8;
     int64 duration = 9;
+    map<string, string> extra = 255;
 }
 
 message FriendAddNoticeEvent{
@@ -120,6 +127,7 @@ message FriendAddNoticeEvent{
     string post_type = 3;
     string notice_type = 4;
     int64 user_id = 5;
+    map<string, string> extra = 255;
 }
 
 message GroupRecallNoticeEvent{
@@ -131,6 +139,7 @@ message GroupRecallNoticeEvent{
     int64 user_id = 6;
     int64 operator_id = 7;
     int32 message_id = 8;
+    map<string, string> extra = 255;
 }
 
 message FriendRecallNoticeEvent{
@@ -140,6 +149,7 @@ message FriendRecallNoticeEvent{
     string notice_type = 4;
     int64 user_id = 5;
     int32 message_id = 6;
+    map<string, string> extra = 255;
 }
 
 message FriendRequestEvent{
@@ -150,6 +160,7 @@ message FriendRequestEvent{
     int64 user_id = 5;
     string comment = 6;
     string flag = 7;
+    map<string, string> extra = 255;
 }
 
 message GroupRequestEvent{
@@ -162,4 +173,5 @@ message GroupRequestEvent{
     int64 user_id = 7;
     string comment = 8;
     string flag = 9;
+    map<string, string> extra = 255;
 }
