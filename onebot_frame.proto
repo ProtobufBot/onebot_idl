@@ -4,7 +4,7 @@ import "onebot_api.proto";
 import "onebot_event.proto";
 
 message Frame{
-    int64 botId = 1;
+    int64 bot_id = 1;
     FrameType frame_type = 2;
     string echo = 3;
     bool ok = 4; // 是否正常 （API resp）
