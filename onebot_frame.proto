@@ -24,6 +24,8 @@ message Frame{
         FriendRequestEvent friend_request_event = 111;
         GroupRequestEvent  group_request_event = 112;
         GroupTempMessageEvent  group_temp_message_event = 113;
+        GroupNotifyEvent group_notify_event = 114;
+        ChannelMessageEvent channel_message_event = 115;
 
         SendPrivateMsgReq send_private_msg_req = 201;
         SendGroupMsgReq send_group_msg_req = 202;
@@ -67,6 +69,7 @@ message Frame{
         SendMusicReq send_music_req = 240;
         SendGroupPokeReq send_group_poke_req = 241;
         SendFriendPokeReq send_friend_poke_req = 242;
+        SendChannelMsgReq send_channel_msg_req = 243;
 
         SendPrivateMsgResp send_private_msg_resp = 301;
         SendGroupMsgResp send_group_msg_resp = 302;
@@ -110,6 +113,7 @@ message Frame{
         SendMusicResp send_music_resp = 340;
         SendGroupPokeResp send_group_poke_resp = 341;
         SendFriendPokeResp send_friend_poke_resp = 342;
+        SendChannelMsgResp send_channel_msg_resp = 343;
     }
 
     enum FrameType{
@@ -128,6 +132,8 @@ message Frame{
         TFriendRequestEvent = 111;
         TGroupRequestEvent = 112;
         TGroupTempMessageEvent = 113;
+        TGroupNotifyEvent = 114;
+        TChannelMessageEvent = 115;
 
         TSendPrivateMsgReq = 201;
         TSendGroupMsgReq = 202;
@@ -171,7 +177,7 @@ message Frame{
         TSendMusicReq = 240;
         TSendGroupPokeReq = 241;
         TSendFriendPokeReq = 242;
-
+        TSendChannelMsgReq = 243;
 
         TSendPrivateMsgResp = 301;
         TSendGroupMsgResp = 302;
@@ -215,5 +221,6 @@ message Frame{
         TSendMusicResp = 340;
         TSendGroupPokeResp = 341;
         TSendFriendPokeResp = 342;
+        TSendChannelMsgResp = 343;
     }
 }

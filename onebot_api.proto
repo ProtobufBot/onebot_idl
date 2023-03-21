@@ -2,15 +2,14 @@ syntax = "proto3";
 package onebot;
 import "onebot_base.proto";
 
-
 message SendPrivateMsgReq{
     int64 user_id = 1;
     repeated Message message = 2;
     bool auto_escape = 3;
 }
 message SendPrivateMsgResp{
-    //    int32 message_id = 1; // 废弃
-    MessageReceipt message_id = 2;
+    int32 message_id = 1;  // 兼容旧版GMC
+    MessageReceipt message_receipt = 2;
 }
 
 message SendGroupMsgReq{
@@ -18,9 +17,21 @@ message SendGroupMsgReq{
     repeated Message message = 2;
     bool auto_escape = 3;
 }
+
 message SendGroupMsgResp{
-    //    int32 message_id = 1; // 废弃
-    MessageReceipt message_id = 2;
+    int32 message_id = 1; // 兼容旧版GMC
+    MessageReceipt message_receipt = 2;
+}
+
+message SendChannelMsgReq{
+    uint64 guild_id = 1;
+    uint64 channel_id = 2;
+    repeated Message message = 3;
+    bool auto_escape = 4;
+}
+
+message SendChannelMsgResp{
+    uint64 message_id = 1;
 }
 
 message SendMsgReq{
@@ -31,13 +42,13 @@ message SendMsgReq{
     bool auto_escape = 5;
 }
 message SendMsgResp{
-    //    int32 message_id = 1; // 废弃
-    MessageReceipt message_id = 2;
+    int32 message_id = 1; // 兼容旧版GMC
+    MessageReceipt message_receipt = 2;
 }
 
 message DeleteMsgReq{
-//    int32 message_id = 1; // 废弃
-    MessageReceipt message_id = 2;
+    int32 message_id = 1; // 兼容旧版GMC
+    MessageReceipt message_receipt = 2;
 }
 message DeleteMsgResp{
 }
@@ -418,14 +429,17 @@ message SendMusicResp{
 }
 
 message SendGroupPokeReq{
-    int64 group_id = 1;
-    int64 user_id = 2;
+    int64 to_uin = 1;
+    int64 group_id = 2;
 }
+
 message SendGroupPokeResp{
 }
 
 message SendFriendPokeReq{
-    int64 user_id = 2;
+    int64 to_uin = 1;
+    int64 aio_uin = 2;
 }
+
 message SendFriendPokeResp{
 }
